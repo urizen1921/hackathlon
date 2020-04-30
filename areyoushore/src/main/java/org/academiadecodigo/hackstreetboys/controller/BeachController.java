@@ -156,36 +156,10 @@ public class BeachController {
         return "list";
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/add")
-    public String addBeach(Model model) {
-        model.addAttribute("beach", new Beach());
-        return "add-update";
-    }
-
-    @RequestMapping(method = RequestMethod.GET, path = "/{id}/edit")
-    public String editBeach(@PathVariable Integer id, Model model) {
-        model.addAttribute("beach", beachService.get(id));
-        return "/add";
-    }
-
-    @RequestMapping(method = RequestMethod.POST, path = {"/", ""}, params = "action=save")
-    public String saveBeach(@Valid @ModelAttribute("beach") Beach beach, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
-
-        if (bindingResult.hasErrors()) {
-            return "add-update";
-        }
-
-        Beach savedBeach = beachService.save(beach);
-        redirectAttributes.addFlashAttribute("lastAction", "Saved " + savedBeach.getBeachName() + " " + savedBeach.getId());
-        return "redirect:add-update" + savedBeach.getId();
-    }
-
     @RequestMapping(method = RequestMethod.GET, path = "/{id}/details")
     public String showBeach(@PathVariable Integer id, Model model) {
         Beach beach = beachService.get(id);
         model.addAttribute("beach", beach);
         return "beach_detail";
     }
-
-
 }
