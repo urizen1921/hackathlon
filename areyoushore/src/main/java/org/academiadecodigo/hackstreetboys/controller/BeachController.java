@@ -142,7 +142,7 @@ public class BeachController {
         beachService.save(beach18);
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = {"/index"})
+    @RequestMapping(method = RequestMethod.GET)
     public String homePage() {
         beachService.deleteAll();
         createBeaches();
