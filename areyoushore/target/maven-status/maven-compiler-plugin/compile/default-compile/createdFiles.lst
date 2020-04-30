@@ -1,0 +1,7 @@
+org/academiadecodigo/hackstreetboys/model/Model.class
+org/academiadecodigo/hackstreetboys/services/MockBeachService.class
+org/academiadecodigo/hackstreetboys/services/BeachService.class
+org/academiadecodigo/hackstreetboys/model/Beach.class
+org/academiadecodigo/hackstreetboys/model/Status.class
+org/academiadecodigo/hackstreetboys/controller/BeachController.class
+org/academiadecodigo/hackstreetboys/services/AbstractMockService.class
