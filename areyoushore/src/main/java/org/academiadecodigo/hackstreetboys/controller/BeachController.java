@@ -16,7 +16,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/beach")
 public class BeachController {
 
     private BeachService beachService;
@@ -143,7 +142,7 @@ public class BeachController {
         beachService.save(beach18);
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = {"index", "/", ""})
+    @RequestMapping(method = RequestMethod.GET, path = {"/index"})
     public String homePage() {
         beachService.deleteAll();
         createBeaches();
