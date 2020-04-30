@@ -89,6 +89,12 @@
       <version>2.3.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.heroku</groupId>
+      <artifactId>webapp-runner</artifactId>
+      <version>9.0.31.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>
