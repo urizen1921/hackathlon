@@ -150,7 +150,7 @@ public class BeachController {
         return "index";
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = {"list"})
+    @RequestMapping(method = RequestMethod.GET, path = {"/list"})
     public String listBeach(Model model) {
         model.addAttribute("beachs", beachService.list());
         return "list";
