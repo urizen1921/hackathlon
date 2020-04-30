@@ -244,10 +244,19 @@
 
 
 
-
-            <p class="w3-text-grey margin-text" >
-                The <span th:text="*{beach.location}"></span> is a region that characterises modern Portugal, by combining both traditional heritage with forward thinking and liberal attitudes. By day colourful fishing boats are hauled onto the beaches to sell their fresh catch in the local fish market, while by night these same beaches play host to uber-cool beach parties.
+            <td th:switch="${beach.location}">
+            <p th:case="'Costa da Caparica'" class="w3-text-grey margin-text" >
+            <span th:text="*{beach.location}"></span> is a region that characterises modern Portugal, by combining both traditional heritage with forward thinking and liberal attitudes. By day colourful fishing boats are hauled onto the beaches to sell their fresh catch in the local fish market, while by night these same beaches play host to uber-cool beach parties.
             </p>
+                <p th:case="'Alcácer do Sal'" class="w3-text-grey margin-text" >
+                    <span th:text="*{beach.location}"></span>, graciously laid out over the right bank of the Sado river and rising up a gentle slope, has been settled since the earliest of times. Archaeological remains have been found that date back to the Neolithic period not to mention evidence of Greek, Phoenician and other Mediterranean peoples having passed through.
+                </p>
+                <p th:case="'Ericeira'" class="w3-text-grey margin-text" >
+                    <span th:text="*{beach.location}"></span> is a charming Portuguese fishing town that is situated along a coastline of outstanding surfing beaches. This powerful and reliable surf has transformed peaceful Ericeira into a surfing mecca; boasting both a chilled daytime scene and a lively nightlife, along with excellent accommodation options and top-rated tourist facilities.
+                </p>
+                <p th:case="'Sintra'" class="w3-text-grey margin-text" >
+                    <span th:text="*{beach.location}"></span>, the Moon Hill, is a place full of magic and mystery, where Nature and Man have combined in such a perfect symbiosis that UNESCO has granted it Word Heritage Site status. Whatever your plan, a good suggestion is always to start from the historic centre, after an invigorating breakfast to prepare for a full day.
+                </p>
         </div>
 
         <div  class="button-check-another w3-button w3-black w3-hover-black  w3-large w3-margin-top">
